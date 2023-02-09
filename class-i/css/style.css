@@ -1,0 +1,67 @@
+.nav-link{
+    color: #141414;
+    font-weight: 500;
+}
+
+.nav-link:hover{
+    color: #007042;
+}
+
+.carousel-item.active{
+    display: flex;
+    justify-content: space-around;
+}
+
+.carousel-item-start, .carousel-item-end{
+    display: flex;
+    justify-content: space-around;
+}
+
+.carousel-item p{
+    color: #017143;
+    font-size: 2.5rem;
+    width: 30%;
+    font-weight: 400;
+    margin-top: 8rem;
+    margin-left: 4rem;
+}
+
+.carousel-item p .one{
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0;
+    font-size: 4rem;
+}
+
+.carousel-item p .two{
+    color: #312a1e;
+    font-weight: 600;
+}
+
+.carousel-item img{
+    width: 40%;
+}
+
+.carousel-control-prev-icon{
+    background-image: url(../img/back.svg);
+}
+
+.carousel-control-next-icon{
+    background-image: url(../img/next.svg);
+}
+
+.card:hover{
+   box-shadow: 0rem 0rem 2rem 0rem #00704136;
+   transition: .3s;
+}
+
+.card{
+    border: 1px solid #00704194;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.card .card-text{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
