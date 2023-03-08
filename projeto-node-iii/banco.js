@@ -1,10 +1,10 @@
-const Sequelize = require("sequilize")
+const Sequelize = require("sequelize")
 //'Nome' - 'Usuário' - 'Senha'
-const sequelize = new Sequelize("banco", "root", "",{
+const sequelize = new Sequelize("test", "root", "",{
     //Local do banco
     host: "localhost",
     //Dialet é pra avisar com qual banco ele vai se comunicar
-    dialet: "mysql"
+    dialect: "mysql"
 })
 
 //Autenticando a conexão com o banco
@@ -42,7 +42,7 @@ const Agendamentos = sequelize.define("agendamentos", {
     
 })
 
-//Agendamento.sync({force: true})
+// Agendamentos.sync({force: true})
 
 Agendamentos.create({
     nome: "Jackeline Paula",
