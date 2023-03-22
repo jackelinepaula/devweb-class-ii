@@ -10,6 +10,10 @@ app.get("/", function(req, res){
     res.render("first_page")
 })
 
+app.post("/cadastrar", function(req, res){
+    res.send("Formulário recebido")
+})
+
 app.get("/sec", function(req, res){
     res.render("second_page")
 })

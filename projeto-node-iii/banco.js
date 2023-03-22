@@ -1,48 +1,42 @@
-// const Sequelize = require("sequelize")
-// //'Nome' - 'Usuário' - 'Senha'
-// const sequelize = new Sequelize("test", "root", "",{
-//     //Local do banco
-//     host: "localhost",
-//     //Dialet é pra avisar com qual banco ele vai se comunicar
-//     dialect: "mysql"
-// })
+const Sequelize = require("sequelize")
+//'Nome' - 'Usuário' - 'Senha'
+const sequelize = new Sequelize("test", "root", "",{
+    //Local do banco
+    host: "localhost",
+    //Dialet é pra avisar com qual banco ele vai se comunicar
+    dialect: "mysql"
+})
 
-// //Autenticando a conexão com o banco
-// sequelize.authenticate().then(function(){
-//     console.log("Conectado ao banco")
-// }).catch(function(erro){
-//     console.log("Falha ao conectar: " + erro)
-// })
+//Autenticando a conexão com o banco
+sequelize.authenticate().then(function(){
+    console.log("Conectado ao banco")
+}).catch(function(erro){
+    console.log("Falha ao conectar: " + erro)
+})
 
-// //Criando o molde de uma tabela do banco
-// const Agendamentos = sequelize.define("agendamentos", {
-//     //Campos da tabela
-//     nome:{
-//         //Tipo de dado do campo
-//         type: Sequelize.STRING
-//     },
-//     endereco:{
-//         type: Sequelize.STRING
-//     },
-//     bairro:{
-//         type: Sequelize.STRING
-//     },
-//     cep:{
-//         type: Sequelize.INTEGER
-//     },
-//     cidade:{
-//         type: Sequelize.STRING
-//     },
-//     estado:{
-//         type: Sequelize.STRING
-//     },
-//     observacao:{
-//         type: Sequelize.STRING
-//     }
+//Criando o molde de uma tabela do banco
+const Agendamentos = sequelize.define("agendamentos", {
+    //Campos da tabela
+    nome:{
+        //Tipo de dado do campo
+        type: Sequelize.STRING
+    },
+    telefone:{
+        type: Sequelize.STRING
+    },
+    origem:{
+        type: Sequelize.STRING
+    },
+    data:{
+        type: Sequelize.STRING
+    },
+    observacao:{
+        type: Sequelize.TEXT
+    }
     
-// })
+})
 
-// // Agendamentos.sync({force: true})
+Agendamentos.sync({force: true})
 
 // Agendamentos.create({
 //     nome: "Jackeline Paula",
