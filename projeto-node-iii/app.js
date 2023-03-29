@@ -21,7 +21,11 @@ app.get("/", function(req, res){
 //Os dados do form serão enviados via POST
 app.post("/cadastrar", function(req, res){
     post.create({
-        nome: req.body.nome
+        nome: req.body.nome,
+        telefone: req.body.telefone,
+        origem: req.body.origem,
+        data: req.body.date,
+        observacao: req.body.obs
     }).then(function(){
         res.send("Dados recebidos")
     }).catch(function(erro){

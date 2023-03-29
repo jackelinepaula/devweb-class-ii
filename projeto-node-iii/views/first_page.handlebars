@@ -27,25 +27,26 @@
         <form action="/cadastrar" method="POST">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" name="nome" class="form-control" id="nome">
+                <input type="name" name="nome" class="form-control" id="nome">
             </div>
             <div class="mb-3">
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="text" class="form-control" id="telefone" placeholder="(XX)XXXXX-XXXX">
+                <input type="text" name="telefone" class="form-control" id="telefone" placeholder="(XX)XXXXX-XXXX">
             </div>
             <div class="mb-3">
                 <label for="origem" class="form-label">Origem</label>
-                <select name="" id="origem" class="form-select">
-                    <option value="">Celular</option>
+                <select name="origem" id="origem" class="form-select">
+                    <option value="1">Celular</option>
+                    <option value="2">Fixo</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="date" class="form-label">Data do Contato</label>
-                <input class="form-control" type="date" name="" id="date">
+                <input class="form-control" type="date" name="date" id="date">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="obs">Observação</label>
-                <textarea name="" id="obs" cols="30" rows="4" class="form-control"></textarea>
+                <label class="obs" for="obs">Observação</label>
+                <textarea name="obs" id="obs" cols="30" rows="4" class="form-control obs"></textarea>
             </div>
             <div class="mb-3">
                 <input class="btn btn-primary" type="submit" value="Cadastrar">

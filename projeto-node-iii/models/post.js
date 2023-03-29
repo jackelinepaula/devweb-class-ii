@@ -22,7 +22,7 @@ const Agendamentos = db.sequelize.define("agendamentos", {
     
 })
 
-//Criação de tabela
+// //Criação de tabela
 // Agendamentos.sync({force: true})
 
 //INSERTs
