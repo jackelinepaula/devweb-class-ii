@@ -33,6 +33,7 @@ app.post("/cadastrar", function(req, res){
     })
 })
 
+//Rota para a segunda página
 app.get("/sec", function(req, res){
     res.render("second_page")
 })
