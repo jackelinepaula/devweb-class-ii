@@ -1,11 +1,51 @@
-<h1>Handlebars!</h1>
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg " style="background-color: #e3f2fd;">
+    <div class="container-md">
+        <a class="navbar-brand" href="#">Sistema Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Cadastrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/consulta">Consultar</a>
+                </li>
+            </ul>
+        </div>
 
-<button type="button" class="btn btn-link">Link</button>
+    </div>
+</nav>
+
+<div class="container md">
+    <br><br>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Origem</th>
+            <th scope="col">Data</th>
+            <th scope="col">Observação</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each post}}
+        {{#dataValues}}
+        <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{nome}}</td>
+            <td>{{telefone}}</td>
+            <td>{{origem}}</td>
+            <td>{{data}}</td>
+            <td>{{observacao}}</td>
+        </tr>
+        {{/dataValues}}
+        {{/each}}
+    </tbody>
+</table>
+</div>

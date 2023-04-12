@@ -27,9 +27,18 @@ app.post("/cadastrar", function(req, res){
         data: req.body.date,
         observacao: req.body.obs
     }).then(function(){
-        res.send("Dados recebidos")
+        res.redirect("/consulta")
     }).catch(function(erro){
         res.send("Falha ao cadastrar: "+erro)
+    })
+})
+
+//Pegando dados pra apresentar
+app.get("/consulta", function(req, res){
+    post.findAll().then(function(post){
+        res.render("second_page", {post})
+    }).catch(function(erro){
+        console.log("Erro ao carregar dados"+erro)
     })
 })
 
