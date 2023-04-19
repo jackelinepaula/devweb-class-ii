@@ -42,6 +42,20 @@ app.get("/consulta", function(req, res){
     })
 })
 
+//Rota para exclusão
+app.get("/excluir/:id", function(req, res){
+    post.destroy({
+        where:{
+            'id': req.params.id
+        }
+    }).then(() => {
+        res.redirect("/consulta")
+    }).catch((erro) => {
+        console.log("Erro ao carregar dados"+erro);
+    })
+  
+})
+
 //Rota para a segunda página
 app.get("/sec", function(req, res){
     res.render("second_page")
