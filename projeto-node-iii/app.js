@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 const handlebars = require('express-handlebars').engine
-
+const helpers = require('handlebars-helpers')();
 
 const bodyParser = require('body-parser')
 const post = require('./models/post')
@@ -10,15 +10,10 @@ const post = require('./models/post')
 
 
 //Configurando o template engine 
-app.engine("handlebars", handlebars({defaultLayout: "main"}))
+app.engine("handlebars", handlebars({defaultLayout: "main",
+            helpers: helpers
+}))
 app.set("view engine", "handlebars")
-
-handlebars.registerHelper('equals', function(origem, valor){
-    if(origem === valor){
-        return true 
-    }
-    return false
-})
 
 
 //Configurando o body-parser

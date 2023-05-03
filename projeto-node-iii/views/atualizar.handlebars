@@ -18,7 +18,7 @@
             <div class="mb-3">
                 <label for="origem" class="form-label">Origem</label>
                 <select name="origem" id="origem" class="form-select">
-                    <option disable selected >{{#equals origem '2'}}Fixo{{/equals}}</option>
+                    <option disable selected>{{#eq origem '2'}}Fixo{{else}}Celular{{/eq}}</option>
                     <option value="1" >Celular</option>
                     <option value="2" >Fixo</option>
                 </select>
